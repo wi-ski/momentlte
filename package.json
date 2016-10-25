@@ -18,9 +18,9 @@
     "watch": "npm-watch",
     "test": "mocha",
     "gogo": "browserify ./lib/index.js -o ./dist/bundle.js",
-    "_gogolive": "browserify ./lib/exports.js | uglifyjs > ./dist/bundle.js",
-    "_gogolive": "browserify ./lib/index.js -o /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js",
-    "gogolive": "browserify ./lib/exports.js | uglifyjs > /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js"
+    "gogobuild": "browserify ./lib/exports.js | uglifyjs > ./dist/bundle.js",
+    "gogolive": "browserify ./lib/exports.js | uglifyjs > /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js",
+    "gogolivetest": "browserify ./lib/index.js -o /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js"
   },
   "keywords": [
     "momentjs",

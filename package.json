@@ -17,10 +17,10 @@
   "scripts": {
     "watch": "npm-watch",
     "test": "mocha",
-    "gogo": "browserify ./lib/index.js -o ./dist/bundle.js",
+    "gogo": "browserify ./lib/exports.js -o ./dist/bundle.js",
     "gogobuild": "browserify ./lib/exports.js | uglifyjs > ./dist/bundle.js",
     "gogolive": "browserify ./lib/exports.js | uglifyjs > /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js",
-    "gogolivetest": "browserify ./lib/index.js -o /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js"
+    "gogolivetest": "browserify ./lib/exports.js -o /home/pil0t/powr_projects/powr/app/assets/javascripts/momentlte.js"
   },
   "keywords": [
     "momentjs",

@@ -48,3 +48,22 @@ describe('getters',function(){
     });
 
 });
+
+
+describe('setters',function(){
+    beforeEach(function() {
+        sept5 = momentlte(sept5String);
+      // runs before each test in this block
+    });
+    it('Should set the minute value', function() {
+        var formatString = 'h:mm (a)';
+        var expected = '1:00 (AM)';
+
+        sept5.minute(0);
+
+        var coerced = sept5.format(formatString);
+        expect(coerced).to.equal(expected);
+    });
+
+
+});

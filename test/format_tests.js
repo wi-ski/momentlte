@@ -16,35 +16,35 @@ describe('Format',function(){
     it('Should print the ISO8601 format', function() {
         var expected = '1990-09-05T01:01:01Z';
         var actual = sept5.toISOString();
-        expect(expected).to.equal(actual); //'September 5 should be the same no matter what'
+        expect(actual).to.equal(expected); //'September 5 should be the same no matter what'
     });
 
     it('Should print the YYYY-MM-DD format', function() {
         var formatString = 'YYYY-MM-DD';
         var expected = '1990-09-05';
         var coerced = sept5.format(formatString);
-        expect(expected).to.equal(coerced); //'September 5 should be the same no matter what'
+        expect(coerced).to.equal(expected); //'September 5 should be the same no matter what'
     });
 
     it('Should print the MM-DD-YYYY format', function() {
         var formatString = 'MM-DD-YYYY';
         var expected = '09-05-1990';
         var coerced = sept5.format(formatString);
-        expect(expected).to.equal(coerced); //'September 5 should be the same no matter what'
+        expect(coerced).to.equal(expected); //'September 5 should be the same no matter what'
     });
 
     it('Should print the DD-MM-YYYY format', function() {
         var formatString = 'DD-MM-YYYY';
         var expected = '05-09-1990';
         var coerced = sept5.format(formatString);
-        expect(expected).to.equal(coerced); //'September 5 should be the same no matter what'
+        expect(coerced).to.equal(expected); //'September 5 should be the same no matter what'
     });
 
     it('Should print the A (AM/PM) format', function() {
         var formatString = 'A';
         var expected = 'AM';
         var coerced = sept5.format(formatString);
-        expect(expected).to.equal(coerced);
+        expect(coerced).to.equal(expected);
     });
 
     it('Should print the A (AM/PM) format', function() { //Just an evening test
@@ -54,9 +54,20 @@ describe('Format',function(){
         var formatString = 'A';
         var expected = 'PM';
         var coerced = sept5.format(formatString);
-        expect(expected).to.equal(coerced);
+        expect(coerced).to.equal(expected);
     });
 
+    it('Should print the h:mm (a) format', function() {
+        var formatString = 'h:mm (a)';
+        var expected = '1:01 (AM)';
+        var coerced = sept5.format(formatString);
+        expect(coerced).to.equal(expected);
+    });
+    //     _        _               _ 
+    //    / \   ___| |_ _   _  __ _| |
+    //   / _ \ / __| __| | | |/ _` | |
+    //  / ___ \ (__| |_| |_| | (_| | |
+    // /_/   \_\___|\__|\__,_|\__,_|_|
     it('Should print the M format',function(){ //                 1 2 ... 11 12
         //Todo: finish this.
     });
@@ -206,7 +217,10 @@ describe('Format',function(){
     });
 
     it('Should print the h format',function(){ //                 1 2 ... 11 12
-        //Todo: finish this.
+        var formatString = 'h';
+        var expected = '1';
+        var coerced = sept5.format(formatString);
+        expect(coerced).to.equal(expected);
     });
 
     it('Should print the hh format',function(){ //                01 02 ... 11 12
@@ -226,15 +240,25 @@ describe('Format',function(){
     });
 
     it('Should print the mm format',function(){ //                00 01 ... 58 59
-        //Todo: finish this.
+        var formatString = 'mm';
+        var expected = '01';
+        var coerced = sept5.format(formatString);
+        expect(coerced).to.equal(expected);
     });
 
     it('Should print the s format',function(){ //                 0 1 ... 58 59
         //Todo: finish this.
+        var formatString = 's';
+        var expected = '1';
+        var coerced = sept5.format(formatString);
+        expect(coerced).to.equal(expected);
     });
 
     it('Should print the ss format',function(){ //                00 01 ... 58 59
-        //Todo: finish this.
+        var formatString = 'ss';
+        var expected = '01';
+        var coerced = sept5.format(formatString);
+        expect(coerced).to.equal(expected);
     });
 
     it('Should print the S format',function(){ //                 0 1 ... 8 9

@@ -13,6 +13,18 @@ describe('Format',function(){
       // runs before each test in this block
     });
 
+
+
+//These should go somewhere else
+//These should go somewhere else
+    it('Should print the toLocaleISOString', function() {
+        var actual = sept5.toLocaleISOString();
+        var expected = '1990-09-05T01:01:01-07:00'
+        expect(actual).to.equal(expected);
+    });
+//These should go somewhere else
+//These should go somewhere else
+
     it('Should print the ISO8601 format', function() {
         var expected = '1990-09-05T01:01:01Z';
         var actual = sept5.toISOString();
@@ -63,6 +75,7 @@ describe('Format',function(){
         var coerced = sept5.format(formatString);
         expect(coerced).to.equal(expected);
     });
+
     //     _        _               _ 
     //    / \   ___| |_ _   _  __ _| |
     //   / _ \ / __| __| | | |/ _` | |
